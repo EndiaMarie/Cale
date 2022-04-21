@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://UI/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/parallax-forest-back-trees.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/button.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Dosen Killer.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://Assets/Captain Blackjack.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Assets/515367__danlucaz__80s-loop-5.wav" type="AudioStream" id=13]
 
 [sub_resource type="DynamicFont" id=3]
 size = 100
@@ -174,6 +175,10 @@ script = ExtResource( 9 )
 scale = Vector2( 3.77, 3.77 )
 texture = ExtResource( 4 )
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
